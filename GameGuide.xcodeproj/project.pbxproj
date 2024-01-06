@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		0885126D2B45E39600F5E6E6 /* GameGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885126C2B45E39600F5E6E6 /* GameGuideApp.swift */; };
-		0885126F2B45E39600F5E6E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885126E2B45E39600F5E6E6 /* ContentView.swift */; };
 		088512712B45E39800F5E6E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088512702B45E39800F5E6E6 /* Assets.xcassets */; };
 		088512742B45E39800F5E6E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088512732B45E39800F5E6E6 /* Preview Assets.xcassets */; };
+		0885127B2B45E3AC00F5E6E6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885127A2B45E3AC00F5E6E6 /* HomeView.swift */; };
+		0885127E2B45E41F00F5E6E6 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885127D2B45E41F00F5E6E6 /* HeroModel.swift */; };
+		088512802B45E42B00F5E6E6 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885127F2B45E42B00F5E6E6 /* ItemModel.swift */; };
+		088512832B45E45400F5E6E6 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088512822B45E45400F5E6E6 /* Endpoints.swift */; };
+		088512852B45E46400F5E6E6 /* APIHeroesCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088512842B45E46400F5E6E6 /* APIHeroesCalls.swift */; };
+		08C26CD42B49F1720065E5A2 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 08C26CD32B49F1720065E5A2 /* heroes.json */; };
+		08C26CDA2B49F31C0065E5A2 /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C26CD92B49F31C0065E5A2 /* HeroCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		088512692B45E39600F5E6E6 /* GameGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885126C2B45E39600F5E6E6 /* GameGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGuideApp.swift; sourceTree = "<group>"; };
-		0885126E2B45E39600F5E6E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		088512702B45E39800F5E6E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		088512732B45E39800F5E6E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0885127A2B45E3AC00F5E6E6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0885127D2B45E41F00F5E6E6 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		0885127F2B45E42B00F5E6E6 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		088512822B45E45400F5E6E6 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		088512842B45E46400F5E6E6 /* APIHeroesCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeroesCalls.swift; sourceTree = "<group>"; };
+		08C26CD32B49F1720065E5A2 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
+		08C26CD92B49F31C0065E5A2 /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +47,14 @@
 		088512602B45E39600F5E6E6 = {
 			isa = PBXGroup;
 			children = (
+				088512702B45E39800F5E6E6 /* Assets.xcassets */,
+				088512732B45E39800F5E6E6 /* Preview Assets.xcassets */,
+				0885126C2B45E39600F5E6E6 /* GameGuideApp.swift */,
+				08C26CD32B49F1720065E5A2 /* heroes.json */,
 				0885126B2B45E39600F5E6E6 /* GameGuide */,
+				0885127C2B45E40300F5E6E6 /* Models */,
+				088512812B45E44000F5E6E6 /* Networking */,
+				088512862B45E46C00F5E6E6 /* Views */,
 				0885126A2B45E39600F5E6E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,9 +70,6 @@
 		0885126B2B45E39600F5E6E6 /* GameGuide */ = {
 			isa = PBXGroup;
 			children = (
-				0885126C2B45E39600F5E6E6 /* GameGuideApp.swift */,
-				0885126E2B45E39600F5E6E6 /* ContentView.swift */,
-				088512702B45E39800F5E6E6 /* Assets.xcassets */,
 				088512722B45E39800F5E6E6 /* Preview Content */,
 			);
 			path = GameGuide;
@@ -62,9 +78,35 @@
 		088512722B45E39800F5E6E6 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				088512732B45E39800F5E6E6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0885127C2B45E40300F5E6E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0885127D2B45E41F00F5E6E6 /* HeroModel.swift */,
+				0885127F2B45E42B00F5E6E6 /* ItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		088512812B45E44000F5E6E6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				088512822B45E45400F5E6E6 /* Endpoints.swift */,
+				088512842B45E46400F5E6E6 /* APIHeroesCalls.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		088512862B45E46C00F5E6E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0885127A2B45E3AC00F5E6E6 /* HomeView.swift */,
+				08C26CD92B49F31C0065E5A2 /* HeroCellView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C26CD42B49F1720065E5A2 /* heroes.json in Resources */,
 				088512742B45E39800F5E6E6 /* Preview Assets.xcassets in Resources */,
 				088512712B45E39800F5E6E6 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0885126F2B45E39600F5E6E6 /* ContentView.swift in Sources */,
+				088512802B45E42B00F5E6E6 /* ItemModel.swift in Sources */,
+				088512852B45E46400F5E6E6 /* APIHeroesCalls.swift in Sources */,
+				0885127B2B45E3AC00F5E6E6 /* HomeView.swift in Sources */,
+				0885127E2B45E41F00F5E6E6 /* HeroModel.swift in Sources */,
+				088512832B45E45400F5E6E6 /* Endpoints.swift in Sources */,
 				0885126D2B45E39600F5E6E6 /* GameGuideApp.swift in Sources */,
+				08C26CDA2B49F31C0065E5A2 /* HeroCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +321,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +330,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ivanjko.GameGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +353,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +362,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ivanjko.GameGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
