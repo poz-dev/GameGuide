@@ -9,33 +9,39 @@ import SwiftUI
 
 struct HeroCellView: View {
     var body: some View {
- 
-            VStack {
-
-                ZStack(alignment: .topTrailing) {
-
-
+        
+        
+        VStack {
+            ZStack {
+                VStack {
+                    
+                    Spacer()
+                    
                     Image("Anti-Mage")
                         .resizable()
-                        .frame(width: 120, height: 55)
-                       .aspectRatio(contentMode: .fit)
+                        .scaledToFit()
+                        .frame(width: 120, height: 70)
                         
-                        .cornerRadius(8)
-
-                    Image("agility.attribute.icon")
-                        .padding(1)
-
+                    
+                    Text("Anti-Mage")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .padding(.bottom, 4)
+                    
+                    Spacer()
                 }
-
-                Spacer()
-
-                Text("Anti-Mage")
-                    .font(.headline)
-                    .padding(.bottom)
+                
+                Image("agility.attribute.icon")
+                    .padding(.bottom, 80)
+                    .padding(.leading, 101)
 
             }
-            .frame(width: 120, height: 100, alignment: .center)
+            
+        }
+        .frame(width: 120, height: 100)
+        .cornerRadius(8)
         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+  
     }
 }
 
