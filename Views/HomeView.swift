@@ -11,22 +11,31 @@ struct HomeView: View {
     
     @StateObject var viewModel = HeroViewModel()
     
+    var heroes = ["Anti-Mage", "Alchemist", "Axe"]
+    
     var body: some View {
         
         NavigationView {
             ScrollView {
-                ForEach(0..<150) { index in
-                    HeroCellView()
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]) {
+                    ForEach(heroes, id: \.self) { hero in
+                        HeroCellView()
+                            .aspectRatio(contentMode: .fit)
+                            
+                    }
+                    
+                    
+                    
                 }
-                
-                
-            }.navigationTitle("Heroes")
+                .padding(5)
+                .navigationTitle("Heroes")
+            }
         }
     }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+    
+    struct HomeView_Previews: PreviewProvider {
+        static var previews: some View {
+            HomeView()
+        }
     }
 }

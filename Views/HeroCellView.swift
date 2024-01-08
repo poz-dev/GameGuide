@@ -20,15 +20,15 @@ struct HeroCellView: View {
                     Image("Anti-Mage")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 120, height: 70)
+                        .frame(width: 120, height: 75)
                         
                     
                     Text("Anti-Mage")
                         .font(.headline)
                         .foregroundColor(.black)
-                        .padding(.bottom, 4)
+                        .padding(.bottom, 10)
                     
-                    Spacer()
+                   Spacer()
                 }
                 
                 Image("agility.attribute.icon")
