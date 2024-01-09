@@ -6,95 +6,93 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct Hero: Codable {
-    let id: Int?
-    let name: String?
-    let localized_name: String?
+struct Hero: Codable, Identifiable {
+    let id: Int
+    let name: String
+    let localized_name: String
+    let primary_attr: PrimaryAttr?
+    let attack_type: AttackType?
+    let roles: [Role]?
+    let img, icon: String?
+    let base_health: Int?
+    let base_health_regen: Double?
+    let base_mana: Int?
+    let base_mana_regen, base_armor: Double?
+    let base_mr, base_attack_min, base_attack_max, base_str: Int?
+    let base_agi, base_int: Int?
+    let str_gain, agi_gain, int_gain: Double?
+    let attack_range, projectile_speed: Int?
+    let attack_rate: Double?
+    let base_attack_time: Int?
+    let attack_point: Double?
+    let move_speed: Int?
+    let turn_rate: Double?
+    let cm_enabled: Bool?
+    let legs: Int?
+    let day_vision, night_vision: Int?
+  
 }
-    
-//    let primaryAttr: PrimaryAttr?
-//    let attackType: AttackType?
-//    let roles: [Role]?
-//    let img, icon: String?
-//    let baseHealth: Int?
-//    let baseHealthRegen: Double?
-//    let baseMana: Int?
-//    let baseManaRegen, baseArmor: Double?
-//    let baseMr, baseAttackMin, baseAttackMax, baseStr: Int?
-//    let baseAgi, baseInt: Int?
-//    let strGain, agiGain, intGain: Double?
-//    let attackRange, projectileSpeed: Int?
-//    let attackRate: Double?
-//    let baseAttackTime: Int?
-//    let attackPoint: Double?
-//    let moveSpeed: Int?
-//    let turnRate: Double?
-//    let cmEnabled: Bool?
-//    let legs: Int?
-//    let dayVision, nightVision: Int?
-//
-//
-//
-//
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, name
-//        case localizedName = "localized_name"
-//        case primaryAttr = "primary_attr"
-//        case attackType = "attack_type"
-//        case roles, img, icon
-//        case baseHealth = "base_health"
-//        case baseHealthRegen = "base_health_regen"
-//        case baseMana = "base_mana"
-//        case baseManaRegen = "base_mana_regen"
-//        case baseArmor = "base_armor"
-//        case baseMr = "base_mr"
-//        case baseAttackMin = "base_attack_min"
-//        case baseAttackMax = "base_attack_max"
-//        case baseStr = "base_str"
-//        case baseAgi = "base_agi"
-//        case baseInt = "base_int"
-//        case strGain = "str_gain"
-//        case agiGain = "agi_gain"
-//        case intGain = "int_gain"
-//        case attackRange = "attack_range"
-//        case projectileSpeed = "projectile_speed"
-//        case attackRate = "attack_rate"
-//        case baseAttackTime = "base_attack_time"
-//        case attackPoint = "attack_point"
-//        case moveSpeed = "move_speed"
-//        case turnRate = "turn_rate"
-//        case cmEnabled = "cm_enabled"
-//        case legs
-//        case dayVision = "day_vision"
-//        case nightVision = "night_vision"
-//
-//    }
-//}
-//
-//enum  : String, Codable {
-//    case melee = "Melee"
-//    case ranged = "Ranged"
-//}
-//
-//enum PrimaryAttr: String, Codable {
-//    case agi = "agi"
-//    case all = "all"
-//    case int = "int"
-//    case str = "str"
-//}
-//
-//enum Role: String, Codable {
-//    case carry = "Carry"
-//    case disabler = "Disabler"
-//    case durable = "Durable"
-//    case escape = "Escape"
-//    case initiator = "Initiator"
-//    case nuker = "Nuker"
-//    case pusher = "Pusher"
-//    case support = "Support"
-//}
-//
-//typealias Welcome = [Hero]
+
+enum  AttackType: String, Codable {
+    case melee = "Melee"
+    case ranged = "Ranged"
+}
+
+enum PrimaryAttr: String, Codable {
+    case agi = "agi"
+    case all = "all"
+    case int = "int"
+    case str = "str"
+}
+
+enum Role: String, Codable {
+    case carry = "Carry"
+    case disabler = "Disabler"
+    case durable = "Durable"
+    case escape = "Escape"
+    case initiator = "Initiator"
+    case nuker = "Nuker"
+    case pusher = "Pusher"
+    case support = "Support"
+}
+
+
+
+var mockHero: Hero = Hero (
+        id: 1,
+        name: "Anti-MAge",
+        localized_name: "Anti-Mage",
+        primary_attr: .str,
+        attack_type: .melee,
+        roles: [.carry, .disabler],
+        img: "Anti-Mage",
+        icon: "anti-mage_icon",
+        base_health: 500,
+        base_health_regen: 2.0,
+        base_mana: 300,
+        base_mana_regen: 1.5,
+        base_armor: 5.0,
+        base_mr: 25,
+        base_attack_min: 40,
+        base_attack_max: 50,
+        base_str: 22,
+        base_agi: 18,
+        base_int: 15,
+        str_gain: 2.5,
+        agi_gain: 2.0,
+        int_gain: 1.5,
+        attack_range: 150,
+        projectile_speed: 900,
+        attack_rate: 1.7,
+        base_attack_time: 1,
+        attack_point: 0.3,
+        move_speed: 300,
+        turn_rate: 0.6,
+        cm_enabled: true,
+        legs: 2,
+        day_vision: 1800,
+        night_vision: 800
+    )
 

@@ -10,11 +10,12 @@ import Combine
 
 class HeroViewModel: ObservableObject {
     
-    @Published var heroes: [Hero] = []
+    @Published var heroes = [Hero]()
     
     private var cancellables: Set<AnyCancellable> = []
     
     static let shared = HeroViewModel()
+    
     
     func fetchHeroData() {
         let urlString = APIUrls.heroesURL
@@ -33,19 +34,8 @@ class HeroViewModel: ObservableObject {
                 }
             }, receiveValue: { [weak self] heroesList in
                 self?.heroes = heroesList
-                self?.printHeroNames()
+                print("Received heroes data: \(heroesList)")
             })
             .store(in: &cancellables)
     }
-    
-    func printHeroNames() {
-        for hero in heroes {
-            if let heroName = hero.localized_name {
-                print("Hero Name: \(heroName)")
-            } else {
-                print("Hero Name: Unknown")
-            }
-        }
-    }
 }
-
