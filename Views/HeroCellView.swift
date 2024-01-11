@@ -42,18 +42,20 @@ struct HeroCellView: View {
                         .padding(.bottom, 80)
                         .padding(.leading, 101)
                 }
-               
 
             }
             
         }
         .frame(width: 125, height: 100)
         .cornerRadius(8)
-        .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+        .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+        
   
     }
 }
-
+//    .background(RoundedRectangle(cornerRadius: 8)
+//                        .fill(Color.white)
+//                        .shadow(color: .black, radius: 4))
 struct HeroCellView_Previews: PreviewProvider {
     static var previews: some View {
         let mockHero = Hero(

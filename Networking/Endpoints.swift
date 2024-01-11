@@ -12,6 +12,7 @@ enum APIUrls {
     
     static let heroesURL = "https://api.opendota.com/api/heroStats"
     static let itemsURL = "https://api.opendota.com/api/constants/items"
+    static let heroLore = "https://api.opendota.com/api/constants/hero_lore"
 }
 
 

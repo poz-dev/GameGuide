@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08052EBE2B4F468A00ACDD70 /* HeroLore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08052EBD2B4F468A00ACDD70 /* HeroLore.swift */; };
+		086B64802B4F3A6100E05A81 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B647F2B4F3A6100E05A81 /* HeroDetailView.swift */; };
 		0885126D2B45E39600F5E6E6 /* GameGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885126C2B45E39600F5E6E6 /* GameGuideApp.swift */; };
 		088512712B45E39800F5E6E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088512702B45E39800F5E6E6 /* Assets.xcassets */; };
 		088512742B45E39800F5E6E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088512732B45E39800F5E6E6 /* Preview Assets.xcassets */; };
@@ -14,12 +16,14 @@
 		0885127E2B45E41F00F5E6E6 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885127D2B45E41F00F5E6E6 /* HeroModel.swift */; };
 		088512802B45E42B00F5E6E6 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885127F2B45E42B00F5E6E6 /* ItemModel.swift */; };
 		088512832B45E45400F5E6E6 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088512822B45E45400F5E6E6 /* Endpoints.swift */; };
-		088512852B45E46400F5E6E6 /* APIHeroesCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088512842B45E46400F5E6E6 /* APIHeroesCalls.swift */; };
+		088512852B45E46400F5E6E6 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088512842B45E46400F5E6E6 /* HeroViewModel.swift */; };
 		08C26CD42B49F1720065E5A2 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 08C26CD32B49F1720065E5A2 /* heroes.json */; };
 		08C26CDA2B49F31C0065E5A2 /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C26CD92B49F31C0065E5A2 /* HeroCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08052EBD2B4F468A00ACDD70 /* HeroLore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLore.swift; sourceTree = "<group>"; };
+		086B647F2B4F3A6100E05A81 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		088512692B45E39600F5E6E6 /* GameGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885126C2B45E39600F5E6E6 /* GameGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGuideApp.swift; sourceTree = "<group>"; };
 		088512702B45E39800F5E6E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,7 +32,7 @@
 		0885127D2B45E41F00F5E6E6 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		0885127F2B45E42B00F5E6E6 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		088512822B45E45400F5E6E6 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		088512842B45E46400F5E6E6 /* APIHeroesCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeroesCalls.swift; sourceTree = "<group>"; };
+		088512842B45E46400F5E6E6 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
 		08C26CD32B49F1720065E5A2 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 		08C26CD92B49F31C0065E5A2 /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				088512822B45E45400F5E6E6 /* Endpoints.swift */,
-				088512842B45E46400F5E6E6 /* APIHeroesCalls.swift */,
+				088512842B45E46400F5E6E6 /* HeroViewModel.swift */,
+				08052EBD2B4F468A00ACDD70 /* HeroLore.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			children = (
 				0885127A2B45E3AC00F5E6E6 /* HomeView.swift */,
 				08C26CD92B49F31C0065E5A2 /* HeroCellView.swift */,
+				086B647F2B4F3A6100E05A81 /* HeroDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,9 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08052EBE2B4F468A00ACDD70 /* HeroLore.swift in Sources */,
 				088512802B45E42B00F5E6E6 /* ItemModel.swift in Sources */,
-				088512852B45E46400F5E6E6 /* APIHeroesCalls.swift in Sources */,
+				088512852B45E46400F5E6E6 /* HeroViewModel.swift in Sources */,
 				0885127B2B45E3AC00F5E6E6 /* HomeView.swift in Sources */,
+				086B64802B4F3A6100E05A81 /* HeroDetailView.swift in Sources */,
 				0885127E2B45E41F00F5E6E6 /* HeroModel.swift in Sources */,
 				088512832B45E45400F5E6E6 /* Endpoints.swift in Sources */,
 				0885126D2B45E39600F5E6E6 /* GameGuideApp.swift in Sources */,

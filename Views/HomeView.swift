@@ -9,14 +9,18 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = HeroViewModel()
+    @StateObject var heroLore = HeroLore()
 
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]) {
                     ForEach(viewModel.heroes, id: \.id) { hero in
-                        HeroCellView(hero: hero)
-                            .aspectRatio(contentMode: .fit)
+                        NavigationLink(destination: HeroDetailView(hero: hero)) {
+                            HeroCellView(hero: hero)
+                                .aspectRatio(contentMode: .fit)
+                        }
+                        
                     }
                 }
                 .padding(5)
@@ -24,6 +28,7 @@ struct HomeView: View {
             }
             .onAppear {
                 viewModel.fetchHeroData()
+                heroLore.fetchHeroLore()
             }
         }
     }
