@@ -8,38 +8,38 @@
 import SwiftUI
 
 struct HeroDetailView: View {
-    
     let hero: Hero
-    
+
     var body: some View {
-        
-        ScrollView {
+        ScrollView(.vertical) {
             VStack {
-                
-            // MARK: - Hero image
-                
-                Image(hero.localized_name.replacingOccurrences(of: " ", with: "_"))
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(8)
-                    .frame(width: 260, height: 120, alignment: .center)
-                    .shadow(color: .gray, radius: 4)
-                
-                // MARK: - Hero short description
-                
-                Text("")
+               
+                    ZStack {
+                        Image("anti-mage")
+                            .resizable()
+                            .frame(width: 240, height: 240, alignment: .center)
+                            .aspectRatio(contentMode: .fill)
+                            .clipped()
+
+                        Image("agi")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .padding()
+                            .offset(x: 100, y: -100)
+                    }
                     
-                
+                    .padding()
+                }
+
+                Spacer()
+            
             
             }
-            
+        .navigationBarTitle(hero.localized_name, displayMode: .inline)
         }
-        .navigationTitle("\(hero.localized_name)")
-        .navigationBarTitleDisplayMode(.inline)
-        
         
     }
-}
+
 
 struct HeroDetailView_Previews: PreviewProvider {
     static var previews: some View {
