@@ -53,9 +53,7 @@ struct HeroCellView: View {
   
     }
 }
-//    .background(RoundedRectangle(cornerRadius: 8)
-//                        .fill(Color.white)
-//                        .shadow(color: .black, radius: 4))
+
 struct HeroCellView_Previews: PreviewProvider {
     static var previews: some View {
         let mockHero = Hero(

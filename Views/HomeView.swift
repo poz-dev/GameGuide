@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = HeroViewModel()
-    @StateObject var heroLore = HeroLore()
+
 
     var body: some View {
         NavigationView {
@@ -28,7 +28,8 @@ struct HomeView: View {
             }
             .onAppear {
                 viewModel.fetchHeroData()
-                heroLore.fetchHeroLore()
+          
+               
             }
         }
     }

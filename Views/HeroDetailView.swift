@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct HeroDetailView: View {
+    
     let hero: Hero
 
     var body: some View {
+      
         ScrollView(.vertical) {
             VStack {
-               
+                // MARK: - TOP IMAGE
                     ZStack {
                         Image("anti-mage")
                             .resizable()
@@ -29,13 +31,29 @@ struct HeroDetailView: View {
                     }
                     
                     .padding()
+                HStack() {
+                    
+                    Image("anti-mage.icon")
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(Circle())
+                        .frame(width: 30, height: 30)
+                        
+                        
+                    Text("Roles: Carry, Initiator, Pusher, Escaping")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
+                
                 }
 
                 Spacer()
             
             
             }
-        .navigationBarTitle(hero.localized_name, displayMode: .inline)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.black.edgesIgnoringSafeArea(.all))
+            .navigationBarTitle(hero.localized_name, displayMode: .inline)
         }
         
     }

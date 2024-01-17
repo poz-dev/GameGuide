@@ -16,10 +16,12 @@ class HeroViewModel: ObservableObject {
     
     static let shared = HeroViewModel()
     
-    
     func fetchHeroData() {
         let urlString = APIUrls.heroesURL
-        guard let url = URL(string: urlString) else { return }
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
         
         URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
@@ -34,7 +36,7 @@ class HeroViewModel: ObservableObject {
                 }
             }, receiveValue: { [weak self] heroesList in
                 self?.heroes = heroesList
-               // print("Received heroes data: \(heroesList)")
+                print("Received heroes data: \(heroesList)")
             })
             .store(in: &cancellables)
     }
