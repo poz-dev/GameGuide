@@ -19,19 +19,19 @@ struct Hero: Codable, Identifiable {
     let base_health: Int?
     let base_health_regen: Double?
     let base_mana: Int?
-    let base_mana_regen, base_armor: Double?
-    let base_mr, base_attack_min, base_attack_max, base_str: Int?
-    let base_agi, base_int: Int?
-    let str_gain, agi_gain, int_gain: Double?
-    let attack_range, projectile_speed: Int?
-    let attack_rate: Double?
-    let base_attack_time: Int?
-    let attack_point: Double?
-    let move_speed: Int?
+    let base_mana_regen, base_armor: Double
+    let base_mr, base_attack_min, base_attack_max, base_str: Int
+    let base_agi, base_int: Int
+    let str_gain, agi_gain, int_gain: Double
+    let attack_range, projectile_speed: Int
+    let attack_rate: Double
+    let base_attack_time: Int
+    let attack_point: Double
+    let move_speed: Int
     let turn_rate: Double?
-    let cm_enabled: Bool?
+    let cm_enabled: Bool
     let legs: Int?
-    let day_vision, night_vision: Int?
+    let day_vision, night_vision: Int
   
 }
 
