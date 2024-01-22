@@ -68,7 +68,7 @@ var mockHero: Hero = Hero (
         attack_type: .melee,
         roles: [.carry, .disabler],
         img: "Anti-Mage",
-        icon: "anti-mage_icon",
+        icon: "anti-mage.icon",
         base_health: 500,
         base_health_regen: 2.0,
         base_mana: 300,

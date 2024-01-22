@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct HeroDetailView: View {
     
@@ -37,14 +38,22 @@ struct HeroDetailView: View {
                 
                 .padding()
                 HStack {
-                    
-                    Image("anti-mage.icon")
-                        .resizable()
-                        .scaledToFit()
-                        .clipShape(Circle())
-                        .frame(width: 30, height: 30)
-                    
-                    
+                    // MARK: - Icon image
+                   
+                       let formattedHeroName = hero.localized_name
+                                        .replacingOccurrences(of: " ", with: "_")
+                                        .replacingOccurrences(of: "-", with: "")
+                                        .replacingOccurrences(of: "Zeus", with: "zuus")
+                                        .lowercased()
+                       if let iconURL = URL(string: APIUrls.heroIcon + formattedHeroName + ".png?") {
+                           KFImage(iconURL)
+                               .fade(duration: 0.25)
+                               .resizable()
+                               .scaledToFit()
+                               .clipShape(Circle())
+                               .frame(width: 30, height: 30)
+                               
+                       }
                     
                     Text("Roles: \(hero.roles?.map { $0.rawValue }.joined(separator: ", ") ?? "")")
                         .font(.caption)

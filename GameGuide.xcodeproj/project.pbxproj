@@ -19,6 +19,8 @@
 		088512832B45E45400F5E6E6 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088512822B45E45400F5E6E6 /* Endpoints.swift */; };
 		088512852B45E46400F5E6E6 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088512842B45E46400F5E6E6 /* HeroViewModel.swift */; };
 		088638242B59CC120029714C /* HeroLoreCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088638232B59CC120029714C /* HeroLoreCall.swift */; };
+		08AE1F842B5EFCC100425159 /* HeroLoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE1F832B5EFCC000425159 /* HeroLoreView.swift */; };
+		08AE1F872B5F09AF00425159 /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE1F862B5F09AF00425159 /* ItemsView.swift */; };
 		08C26CD42B49F1720065E5A2 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 08C26CD32B49F1720065E5A2 /* heroes.json */; };
 		08C26CDA2B49F31C0065E5A2 /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C26CD92B49F31C0065E5A2 /* HeroCellView.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		088512822B45E45400F5E6E6 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		088512842B45E46400F5E6E6 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
 		088638232B59CC120029714C /* HeroLoreCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLoreCall.swift; sourceTree = "<group>"; };
+		08AE1F832B5EFCC000425159 /* HeroLoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLoreView.swift; sourceTree = "<group>"; };
+		08AE1F862B5F09AF00425159 /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
 		08C26CD32B49F1720065E5A2 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 		08C26CD92B49F31C0065E5A2 /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				0885127A2B45E3AC00F5E6E6 /* HomeView.swift */,
+				08AE1F852B5F099900425159 /* ItemsView */,
 				08A0E8D02B5C76D600B2656B /* HeroView */,
 			);
 			path = Views;
@@ -124,8 +129,17 @@
 				086B647F2B4F3A6100E05A81 /* HeroDetailView.swift */,
 				083F8A852B5B392E00401D95 /* HeroStatsView.swift */,
 				08C26CD92B49F31C0065E5A2 /* HeroCellView.swift */,
+				08AE1F832B5EFCC000425159 /* HeroLoreView.swift */,
 			);
 			path = HeroView;
+			sourceTree = "<group>";
+		};
+		08AE1F852B5F099900425159 /* ItemsView */ = {
+			isa = PBXGroup;
+			children = (
+				08AE1F862B5F09AF00425159 /* ItemsView.swift */,
+			);
+			path = ItemsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,10 +221,12 @@
 			files = (
 				088512802B45E42B00F5E6E6 /* ItemModel.swift in Sources */,
 				088512852B45E46400F5E6E6 /* HeroViewModel.swift in Sources */,
+				08AE1F842B5EFCC100425159 /* HeroLoreView.swift in Sources */,
 				0885127B2B45E3AC00F5E6E6 /* HomeView.swift in Sources */,
 				088638242B59CC120029714C /* HeroLoreCall.swift in Sources */,
 				083F8A862B5B392E00401D95 /* HeroStatsView.swift in Sources */,
 				086B64802B4F3A6100E05A81 /* HeroDetailView.swift in Sources */,
+				08AE1F872B5F09AF00425159 /* ItemsView.swift in Sources */,
 				0885127E2B45E41F00F5E6E6 /* HeroModel.swift in Sources */,
 				088512832B45E45400F5E6E6 /* Endpoints.swift in Sources */,
 				0885126D2B45E39600F5E6E6 /* GameGuideApp.swift in Sources */,
