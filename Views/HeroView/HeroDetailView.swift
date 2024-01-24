@@ -9,6 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct HeroDetailView: View {
+
     
     let hero: Hero
     
@@ -16,7 +17,6 @@ struct HeroDetailView: View {
     @State private var heroLore: String?
     
     var body: some View {
-        
         ScrollView(.vertical) {
             VStack {
                 // MARK: - TOP IMAGE
@@ -35,65 +35,58 @@ struct HeroDetailView: View {
                             .offset(x: 100, y: -100)
                     }
                 }
-                
                 .padding()
+                
                 HStack {
                     // MARK: - Icon image
-                   
-                       let formattedHeroName = hero.localized_name
-                                        .replacingOccurrences(of: " ", with: "_")
-                                        .replacingOccurrences(of: "-", with: "")
-                                        .replacingOccurrences(of: "Zeus", with: "zuus")
-                                        .lowercased()
-                       if let iconURL = URL(string: APIUrls.heroIcon + formattedHeroName + ".png?") {
-                           KFImage(iconURL)
-                               .fade(duration: 0.25)
-                               .resizable()
-                               .scaledToFit()
-                               .clipShape(Circle())
-                               .frame(width: 30, height: 30)
-                               
-                       }
+                    let formattedHeroName = hero.localized_name
+                        .replacingOccurrences(of: " ", with: "_")
+                        .replacingOccurrences(of: "-", with: "")
+                        .replacingOccurrences(of: "Zeus", with: "zuus")
+                        .lowercased()
+                    
+                    if let iconURL = URL(string: APIUrls.heroIcon + formattedHeroName + ".png?") {
+                        KFImage(iconURL)
+                            .fade(duration: 0.25)
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(Circle())
+                            .frame(width: 30, height: 30)
+                    }
                     
                     Text("Roles: \(hero.roles?.map { $0.rawValue }.joined(separator: ", ") ?? "")")
                         .font(.caption)
                         .foregroundColor(.gray)
                 }
-            }
-            
-            Button("Show lore") {
                 
-                
-            }
-            .popover(isPresented: $isLoreViewPresented) {
-//                if let heroLore: HeroLore {
-                    ScrollView {
-                        VStack {
-//                            Text(heroLore)
-//                                .foregroundColor(.black)
-//                                .padding()
-                        }
-                    }.background(Color.white.edgesIgnoringSafeArea(.all))
+                Button("Show lore") {
+                    isLoreViewPresented.toggle()
+                   
                 }
-            
-            HeroStatsView(hero: hero)
-              
+                .popover(isPresented: $isLoreViewPresented) {
+                    if let heroLore = heroLore {
+                        ScrollView {
+                            VStack {
+                                Text(heroLore)
+                                    .foregroundColor(.black)
+                                    .padding()
+                            }
+                        }
+                    }
+                }
+                
+                HeroStatsView(hero: hero)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.white.edgesIgnoringSafeArea(.all))
             .navigationBarTitle(hero.localized_name, displayMode: .inline)
-            
-            
-            
-            
-            
         }
-        
     }
-
+}
 
 struct HeroDetailView_Previews: PreviewProvider {
     static var previews: some View {
         HeroDetailView(hero: mockHero)
     }
 }
+

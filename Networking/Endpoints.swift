@@ -16,6 +16,7 @@ enum APIUrls {
     static let heroLore = "https://api.opendota.com/api/constants/hero_lore"
     static let heroIcon = "https://cdn.dota2.com/apps/dota2/images/dota_react/heroes/icons/"
     static let heroImage = "https://cdn.dota2.com/apps/dota2/images/heroes/"
+    static let heroAbilities = "https://api.opendota.com/api/constants/abilities"
 }
 
 
