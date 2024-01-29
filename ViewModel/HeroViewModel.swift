@@ -36,7 +36,7 @@ class HeroViewModel: ObservableObject {
                 }
             }, receiveValue: { [weak self] heroesList in
                 self?.heroes = heroesList
-                print("Received heroes data: \(heroesList)")
+              //  print("Received heroes data: \(heroesList)")
             })
             .store(in: &cancellables)
     }

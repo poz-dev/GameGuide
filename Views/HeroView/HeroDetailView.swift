@@ -74,8 +74,9 @@ struct HeroDetailView: View {
                         }
                     }
                 }
-                
+                Divider()
                 HeroStatsView(hero: hero)
+                Divider()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.white.edgesIgnoringSafeArea(.all))
@@ -83,6 +84,8 @@ struct HeroDetailView: View {
         }
     }
 }
+   
+
 
 struct HeroDetailView_Previews: PreviewProvider {
     static var previews: some View {
