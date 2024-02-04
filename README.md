@@ -2,6 +2,8 @@ Game Guide for Game Data 2
 
 This iOS app fetches heroes, abilities, stats, and items data from open APIs for your favorite game. Built with SwiftUI and MVVM architecture.
 
+Currently in Development!
+
 Features
 
 Explore heroes, abilities, stats, and items.
